@@ -1,0 +1,11 @@
+/* Very small screen */
+@media (max-width: 374px) {
+
+}
+
+/* Small screen */
+@media (min-width: 375px) and (max-width: 575px) {
+
+}
+
+
