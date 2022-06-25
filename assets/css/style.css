@@ -45,6 +45,7 @@ body {
 .container {
   width: 1200px;
   height: 100vh !important;
+  overflow-y: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -67,7 +68,7 @@ body {
   align-items: center;
   justify-content: space-evenly;
   flex-direction: row;
-
+  gap: 80px;
 }
 
 .card-image {
@@ -75,13 +76,33 @@ body {
   height: 100%;
   /* background-color: aquamarine; */
   position: relative;
+  overflow-x: visible;
 }
 
 .card-image .desktop-image {
-  width: 340px;
+  width: 380px;
   position: absolute;
   top: 50%;
   left: 40%;
+  transform: translate(-50%, -50%);
+}
+
+.card-image .desktop-pattern {
+  width: 500px;
+  /* position: absolute;
+  top: 50%;
+  left: 20%;
+  transform: translate(-50%, -50%); */
+  object-fit: cover;
+  overflow: hidden;
+  object-position: -180px -50px;
+}
+
+.card-image .box-image {
+  width: 180px;
+  position: absolute;
+  top: 50%;
+  left: 2%;
   transform: translate(-50%, -50%);
 }
 
@@ -89,11 +110,15 @@ body {
   display: none;
 }
 
+.card-image .pattern-mobile {
+  display: none;
+}
+
 .card-body {
   width: 60%;
   height: 100%;
   padding: 46px 20px;
-  background: lightgreen;
+  /* background: lightgreen; */
   width: 60%;
 }
 
@@ -102,8 +127,59 @@ body {
   padding-bottom: 26px;
 }
 
+.card-body .question-container {
+  width: 100%;
+  padding: 0 4px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
 
+.card-body .question-container .question {
+  font-size: var(--standar-font-size);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+}
 
+.card-body .question-container .question .arrow-down img {
+  cursor: pointer;
+}
+
+.rotated-arrow {
+  transform: rotate(180deg);
+}
+
+.card-body .question-container .dividers {
+  height: 1px;
+  width: 82%;
+  margin: 12px 0;
+  display: block;
+  background-color: var(--light-grayish-blue);
+}
+
+.card-body .question-container .question h4 {
+  font-weight: 400;
+  color: var(--very-dark-grayish-blue);
+}
+
+.card-body .question-container .question h4:hover {
+  color: var(--soft-red);
+}
+
+.font-bolder {
+  font-weight: 700 !important;
+}
+
+.card-body .question-container .question .answer-detail {
+  width: 100%;
+  color: var(--dark-grayish-blue);
+  font-size: 12px;
+  font-weight: 400;
+  padding: 8px 0;
+}
 
 
 
