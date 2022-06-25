@@ -89,10 +89,6 @@ body {
 
 .card-image .desktop-pattern {
   width: 500px;
-  /* position: absolute;
-  top: 50%;
-  left: 20%;
-  transform: translate(-50%, -50%); */
   object-fit: cover;
   overflow: hidden;
   object-position: -180px -50px;
